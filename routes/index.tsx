@@ -1,4 +1,3 @@
-
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { getPost, getPosts, Post } from "@/utils/posts.ts";
 
@@ -6,8 +5,8 @@ export const handler: Handlers<Post[]> = {
   async GET(_req, ctx) {
     const posts = await getPosts();
     return ctx.render(posts);
-  }
-}
+  },
+};
 
 export default function BlogIndexPage(props: PageProps<Post[]>) {
   const posts = props.data;
@@ -18,7 +17,7 @@ export default function BlogIndexPage(props: PageProps<Post[]>) {
         {posts.map((post) => <PostCard post={post} />)}
       </div>
     </main>
-  )
+  );
 }
 
 function PostCard(props: { post: Post }) {
@@ -33,7 +32,7 @@ function PostCard(props: { post: Post }) {
           {new Date(post.publishedAt).toLocaleDateString("en-us", {
             year: "numeric",
             month: "long",
-            day: "numeric"
+            day: "numeric",
           })}
         </time>
         <div class="mt-4 text-gray-900">
@@ -41,5 +40,5 @@ function PostCard(props: { post: Post }) {
         </div>
       </a>
     </div>
-  )
+  );
 }

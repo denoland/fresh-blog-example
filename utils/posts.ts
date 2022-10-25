@@ -1,4 +1,3 @@
-
 import { extract } from "$std/encoding/front_matter.ts";
 import { join } from "$std/path/posix.ts";
 
@@ -34,6 +33,6 @@ export async function getPost(slug: string): Promise<Post | null> {
     title: attrs.title,
     publishedAt: new Date(attrs.published_at),
     content: body,
-    snippet: attrs.snippet
-  }
+    snippet: attrs.snippet,
+  };
 }

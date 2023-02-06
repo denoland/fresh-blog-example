@@ -11,6 +11,7 @@
     "$std/": "https://deno.land/std@0.160.0/",
     "@/": "./",
     "./": "./",
-    "$gfm": "https://deno.land/x/gfm@0.1.26/mod.ts"
+    "$gfm": "https://deno.land/x/gfm@0.1.26/mod.ts",
+    "feed": "https://esm.sh/feed@4.2.2"
   }
 }

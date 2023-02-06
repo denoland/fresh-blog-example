@@ -1,11 +1,11 @@
-import { Handlers, PageProps } from "$fresh/server.ts";
+import { Handlers } from "$fresh/server.ts";
 import { getPosts, Post } from "@/utils/posts.ts";
-import { Feed, type Item as FeedItem } from "feed"
+import { Feed, type Item as FeedItem } from "feed";
 
 export const handler: Handlers<Post[]> = {
   async GET(req, _ctx) {
     const posts = await getPosts();
-    const url = new URL(req.url)
+    const url = new URL(req.url);
     const origin = url.origin;
     const copyright = `Copyright ${new Date().getFullYear()} ${origin}`;
     const feed = new Feed({
@@ -22,7 +22,7 @@ export const handler: Handlers<Post[]> = {
       },
     });
 
-    posts.map( post => {
+    posts.map((post) => {
       const item: FeedItem = {
         id: `${origin}/${post.title}`,
         title: post.title,
@@ -33,8 +33,8 @@ export const handler: Handlers<Post[]> = {
         published: post.publishedAt,
       };
       feed.addItem(item);
-    })
-  
+    });
+
     const atomFeed = feed.atom1();
     return new Response(atomFeed, {
       headers: {

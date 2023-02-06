@@ -9,7 +9,7 @@ export const handler: Handlers<Post> = {
       const post = await getPost(ctx.params.slug);
       return ctx.render(post as Post);
     } catch {
-      return ctx.renderNotFound()
+      return ctx.renderNotFound();
     }
   },
 };

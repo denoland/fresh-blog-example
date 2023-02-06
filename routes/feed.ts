@@ -28,7 +28,7 @@ export const handler: Handlers<Post[]> = {
         title: post.title,
         description: post.snippet,
         date: post.publishedAt,
-        link: `${origin}${post.slug}`,
+        link: `${origin}/${post.slug}`,
         copyright,
         published: post.publishedAt,
       };

@@ -5,8 +5,12 @@ import { CSS, render } from "$gfm";
 
 export const handler: Handlers<Post> = {
   async GET(_req, ctx) {
-    const post = await getPost(ctx.params.slug);
-    return ctx.render(post as Post);
+    try {
+      const post = await getPost(ctx.params.slug);
+      return ctx.render(post as Post);
+    } catch {
+      return ctx.renderNotFound();
+    }
   },
 };
 

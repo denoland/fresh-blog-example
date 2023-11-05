@@ -23,7 +23,7 @@ We’ll select yes for [Tailwind](https://tailwindcss.com/) and VSCode.
 
 Let’s run `deno task start` to see the default app:
 
-![Our default fresh app](https://deno.com/build-a-blog-with-fresh/default-fresh-app.png)
+![Our default fresh app](https://github.com/denoland/fresh-blog-example/assets/18581859/0d35ccea-5140-4fa7-88bd-405ec80dc98c)
 
 Voila!
 

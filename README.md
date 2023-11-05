@@ -23,7 +23,7 @@ We’ll select yes for [Tailwind](https://tailwindcss.com/) and VSCode.
 
 Let’s run `deno task start` to see the default app:
 
-![Our default fresh app](https://deno.com/build-a-blog-with-fresh/default-fresh-app.png)
+![Our default fresh app](https://deno.com/blog/build-a-blog-with-fresh/default-fresh-app.png)
 
 Voila!
 
@@ -180,7 +180,7 @@ export default function BlogIndexPage(props: PageProps<Post[]>) {
 
 Let’s run our server with `deno task start` and check localhost:
 
-![A first look at our blog index page](https://deno.com/build-a-blog-with-fresh/blog-index-page.png)
+![A first look at our blog index page](https://deno.com/blog/build-a-blog-with-fresh/blog-index-page.png)
 
 Awesome start!
 
@@ -258,7 +258,7 @@ export default function PostPage(props: PageProps<Post>) {
 
 Let’s check our localhost:8000 and click on the post:
 
-![Our first blog post](https://deno.com/build-a-blog-with-fresh/our-first-blog-post.png)
+![Our first blog post](https://deno.com/blog/build-a-blog-with-fresh/our-first-blog-post.png)
 
 There it is!
 
@@ -266,11 +266,11 @@ There it is!
 
 Currently, this does not parse markdown. If you write something like this:
 
-![raw markdown blog post file](https://deno.com/build-a-blog-with-fresh/raw-markdown-in-our-first-blog-post.png)
+![raw markdown blog post file](https://deno.com/blog/build-a-blog-with-fresh/raw-markdown-in-our-first-blog-post.png)
 
 It’ll show up like this:
 
-![unprocessed markdown on the blog](https://deno.com/build-a-blog-with-fresh/our-first-blog-post-with-failed-markdown.png)
+![unprocessed markdown on the blog](https://deno.com/blog/build-a-blog-with-fresh/our-first-blog-post-with-failed-markdown.png)
 
 In order to parse markdown, we’ll need to import the module
 [`gfm`](https://deno.land/x/gfm/mod.ts) and pass `post.content` through the
@@ -293,7 +293,7 @@ And update the `<div>` in our component to be:
 
 Now, our post looks like:
 
-![markdown working successfully](https://deno.com/build-a-blog-with-fresh/our-first-blog-post-with-markdown.png)
+![markdown working successfully](https://deno.com/blog/build-a-blog-with-fresh/our-first-blog-post-with-markdown.png)
 
 Better, but we can make this look nicer by injecting `gfm.css` as a style tag.
 Since [`gfm`](https://deno.land/x/gfm/@mod.ts) ships with a stylesheet, we can
@@ -327,7 +327,7 @@ stylesheet to work.
 
 Now markdown looks much better:
 
-![markdown working even better](https://deno.com/build-a-blog-with-fresh/better-markdown-styling.png)
+![markdown working even better](https://deno.com/blog/build-a-blog-with-fresh/better-markdown-styling.png)
 
 ## Deploying to the edge
 
